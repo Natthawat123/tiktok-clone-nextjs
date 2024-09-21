@@ -1,6 +1,6 @@
-import { database } from "@/libs/AppWriteClient"
+import { database, storage } from "@/libs/AppWriteClient"
 
-const useUpdateProfileImage = async (id: string, image: string) => {
+const useUpdateProfileImage = async (id: string, image: string, file: File) => {
     try {
         await database.updateDocument(
             String(process.env.NEXT_PUBLIC_DATABASE_ID), 
@@ -9,8 +9,10 @@ const useUpdateProfileImage = async (id: string, image: string) => {
         { 
             image: image 
         })
+
+        await storage.createFile(String(process.env.NEXT_PUBLIC_BUCKET_ID),image,file)
     } catch (error) {
-        throw error
+        // throw error
     }
 }
 

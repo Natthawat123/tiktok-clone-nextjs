@@ -56,12 +56,12 @@ export default function Login() {
     return (
         <>
             <div>
-                <h1 className="text-center text-[28px] mb-4 font-bold">Log in</h1>
+                <h1 className="text-center text-[28px] mb-4 font-bold">เข้าสู่ระบบ</h1>
 
                 <div className="px-6 pb-2">
                     <TextInput 
                         string={email}
-                        placeholder="Email address"
+                        placeholder="อีเมล"
                         onUpdate={setEmail}
                         inputType="email"
                         error={showError('email')}
@@ -71,7 +71,7 @@ export default function Login() {
                 <div className="px-6 pb-2">
                     <TextInput 
                         string={password}
-                        placeholder="Password"
+                        placeholder="รหัสผ่าน"
                         onUpdate={setPassword}
                         inputType="password"
                         error={showError('password')}
@@ -87,7 +87,7 @@ export default function Login() {
                             ${(!email || !password) ? 'bg-gray-200' : 'bg-[#F02C56]'}
                         `}
                     >
-                        {loading ? <BiLoaderCircle className="animate-spin" color="#ffffff" size={25} /> : 'Log in'}
+                        {loading ? <BiLoaderCircle className="animate-spin" color="#ffffff" size={25} /> : 'เข้าสู่ระบบ'}
                     </button>
                 </div>
             </div>

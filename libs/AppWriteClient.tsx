@@ -9,4 +9,3 @@ const database = new Databases(client);
 const storage = new Storage(client);
 
 export { client, account, database, storage, Query, ID }
-

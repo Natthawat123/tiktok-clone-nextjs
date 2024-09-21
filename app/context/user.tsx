@@ -21,7 +21,7 @@ const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
       const promise = await account.get() as any
       const profile = await useGetProfileByUserId(promise?.$id)
 
-      setUser({ id: promise?.$id, name: promise?.name,  bio: profile?.bio, image: profile?.image });
+      setUser({ id: promise?.$id, name: promise?.name, bio: profile?.bio, image: profile?.image });
     } catch (error) {
       setUser(null);
     }
@@ -36,7 +36,7 @@ const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
       await account.createEmailSession(email, password);
 
       await useCreateProfile(promise?.$id, name, String(process.env.NEXT_PUBLIC_PLACEHOLDER_DEAFULT_IMAGE_ID), '')
-      await checkUser() 
+      await checkUser()
 
     } catch (error) {
       console.error(error);
@@ -57,16 +57,16 @@ const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     try {
       await account.deleteSession('current');
       setUser(null);
-      router.refresh()
+      router.push('/')
     } catch (error) {
       console.error(error);
     }
   };
 
   return (
-      <UserContext.Provider value={{ user, register, login, logout, checkUser }}>
-          {children}
-      </UserContext.Provider>
+    <UserContext.Provider value={{ user, register, login, logout, checkUser }}>
+      {children}
+    </UserContext.Provider>
   );
 };
 

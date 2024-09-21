@@ -75,13 +75,13 @@ export default function Register() {
     return (
         <>
             <div>
-                <h1 className="text-center text-[28px] mb-4 font-bold">Register</h1>
+                <h1 className="text-center text-[28px] mb-4 font-bold">ลงทะเบียน</h1>
 
                 <div className="px-6 pb-2">
 
                     <TextInput 
                         string={name}
-                        placeholder="Name"
+                        placeholder="ชื่อ"
                         onUpdate={setName}
                         inputType="text"
                         error={showError('name')}
@@ -93,7 +93,7 @@ export default function Register() {
 
                     <TextInput 
                         string={email}
-                        placeholder="Email address"
+                        placeholder="อีเมล"
                         onUpdate={setEmail}
                         inputType="email"
                         error={showError('email')}
@@ -104,7 +104,7 @@ export default function Register() {
                 <div className="px-6 pb-2">
                     <TextInput 
                         string={password}
-                        placeholder="Password"
+                        placeholder="รหัสผ่าน"
                         onUpdate={setPassword}
                         inputType="password"
                         error={showError('password')}
@@ -114,7 +114,7 @@ export default function Register() {
                 <div className="px-6 pb-2">
                     <TextInput 
                         string={confirmPassword}
-                        placeholder="Confirm Password"
+                        placeholder="ยืนยันรหัสผ่าน"
                         onUpdate={setConfirmPassword}
                         inputType="password"
                         error={showError('confirmPassword')}
@@ -130,7 +130,7 @@ export default function Register() {
                             ${(!name || !email || !password || !confirmPassword) ? 'bg-gray-200' : 'bg-[#F02C56]'}
                         `}
                     >
-                        {loading ? <BiLoaderCircle className="animate-spin" color="#ffffff" size={25} /> : 'Register'}
+                        {loading ? <BiLoaderCircle className="animate-spin" color="#ffffff" size={25} /> : 'ลงทะเบียน'}
                     </button>
                 </div>
             </div>

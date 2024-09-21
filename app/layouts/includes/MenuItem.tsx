@@ -8,9 +8,9 @@ import { MenuItemTypes } from "@/app/types"
 export default function MenuItem({ iconString, colorString, sizeString }: MenuItemTypes) {
 
     const icons = () => {
-        if (iconString == 'For You') return <AiOutlineHome size={sizeString} color={colorString} />
-        if (iconString == 'Following') return <RiGroupLine size={sizeString} color={colorString} />
-        if (iconString == 'LIVE') return <BsCameraVideo size={sizeString} color={colorString} />
+        if (iconString == 'สำหรับคุณ') return <AiOutlineHome fontSize={sizeString} color={colorString} />
+        if (iconString == 'กำลังติดตาม') return <RiGroupLine size={sizeString} color={colorString} />
+        if (iconString == 'ถ่ายทอดสด') return <BsCameraVideo size={sizeString} color={colorString} />
     }
 
     return (

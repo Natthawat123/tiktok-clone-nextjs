@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { AiFillHeart } from "react-icons/ai"
-import { BsChatDots, BsTrash3 } from "react-icons/bs"
+import { BsChatDots } from "react-icons/bs"
 import { ImMusic } from "react-icons/im"
 import moment from "moment"
 import { useUser } from "@/app/context/user"
@@ -19,6 +19,7 @@ import useCreateLike from "@/app/hooks/useCreateLike"
 import useDeleteLike from "@/app/hooks/useDeleteLike"
 import useDeletePostById from "@/app/hooks/useDeletePostById"
 import { CommentsHeaderCompTypes } from "@/app/types"
+import { Delete } from "@mui/icons-material"
 
 export default function CommentsHeader({ post, params }: CommentsHeaderCompTypes) {
 
@@ -138,7 +139,7 @@ export default function CommentsHeader({ post, params }: CommentsHeaderCompTypes
                             <BiLoaderCircle className="animate-spin" size="25"/>
                         ) : (
                             <button disabled={isDeleteing} onClick={() => deletePost()}>
-                                <BsTrash3 className="cursor-pointer" size="25"/>
+                                <Delete className="cursor-pointer" fontSize="medium"/>
                             </button>
                         )}
                     </div>
@@ -149,7 +150,7 @@ export default function CommentsHeader({ post, params }: CommentsHeaderCompTypes
 
             <p className="flex item-center gap-2 px-8 mt-4 text-sm font-bold">
                 <ImMusic size="17"/>
-                original sound - {post?.profile.name}
+                เสียงต้นฉบับ - {post?.profile.name}
             </p>
 
             <div className="flex items-center px-8 mt-8">

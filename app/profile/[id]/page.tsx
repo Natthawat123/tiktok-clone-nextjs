@@ -57,11 +57,11 @@ export default function Profile({ params }: ProfilePageTypes) {
                                     className="flex item-center rounded-md py-1.5 px-3.5 mt-3 text-[15px] font-semibold border hover:bg-gray-100"
                                 >
                                     <BsPencil className="mt-0.5 mr-1" size="18"/>
-                                    <span>Edit profile</span>
+                                    <span>แก้ไขโปรไฟล์</span>
                                 </button>
                             ) : (
                                 <button className="flex item-center rounded-md py-1.5 px-8 mt-3 text-[15px] text-white font-semibold bg-[#F02C56]">
-                                    Follow
+                                    ติดตาม
                                 </button>
                             )}
                         </div>
@@ -71,11 +71,11 @@ export default function Profile({ params }: ProfilePageTypes) {
                     <div className="flex items-center pt-4">
                         <div className="mr-4">
                             <span className="font-bold">10K</span>
-                            <span className="text-gray-500 font-light text-[15px] pl-1.5">Following</span>
+                            <span className="text-gray-500 font-light text-[15px] pl-1.5">กำลังติดตาม</span>
                         </div>
                         <div className="mr-4">
                             <span className="font-bold">44K</span>
-                            <span className="text-gray-500 font-light text-[15px] pl-1.5">Followers</span>
+                            <span className="text-gray-500 font-light text-[15px] pl-1.5">ผู้ติดตาม</span>
                         </div>
                     </div>
 
@@ -86,8 +86,8 @@ export default function Profile({ params }: ProfilePageTypes) {
                     </ClientOnly>
 
                     <ul className="w-full flex items-center pt-4 border-b">
-                        <li className="w-60 text-center py-2 text-[17px] font-semibold border-b-2 border-b-black">Videos</li>
-                        <li className="w-60 text-gray-500 text-center py-2 text-[17px] font-semibold">Liked</li>
+                        <li className="w-60 text-center py-2 text-[17px] font-semibold border-b-2 border-b-black">วิดีโอ</li>
+                        <li className="w-60 text-gray-500 text-center py-2 text-[17px] font-semibold">ถูกใจ</li>
                     </ul>
 
                     <ClientOnly>
